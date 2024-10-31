@@ -12,23 +12,30 @@
             box-sizing: border-box;
         }
 
-        /* Full-screen background setup */
         body, html {
             height: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
             font-family: Arial, sans-serif;
             color: white;
         }
 
-        .background-image {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .container {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container img {
             width: 100%;
-            height: 100%;
-            background: url('2560x1440Bang.png') no-repeat center center fixed;
-            background-size: cover;
-            z-index: -1;
+            height: auto;
+            border-radius: 10px;
         }
 
         /* Overlay text styling */
@@ -39,7 +46,7 @@
             transform: translateX(-50%);
             width: 90%;
             max-width: 800px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.5);
             padding: 15px;
             border-radius: 8px;
             font-size: 1.5rem;
@@ -47,7 +54,6 @@
             line-height: 1.5;
         }
 
-        /* Responsive text adjustments */
         @media (max-width: 600px) {
             .overlay-text {
                 font-size: 1.2rem;
@@ -57,12 +63,12 @@
     </style>
 </head>
 <body>
-    <!-- Background Image -->
-    <div class="background-image"></div>
-
-    <!-- Overlay text centered at the bottom -->
-    <div class="overlay-text">
-        All eyes (and ideas) are on you. The genesis of fresh ideas is underway, shaping the future—coming soon!
+    <div class="container">
+        <img src="2560x1440Bang_new.png" alt="Vintage Corner Logo">
+        <!-- Image path: /mnt/data/2560x1440Bang.png -->
+        <div class="overlay-text">
+            All eyes (and ideas) are on you. The genesis of fresh ideas is underway, shaping the future—coming soon!
+        </div>
     </div>
 </body>
 </html>
