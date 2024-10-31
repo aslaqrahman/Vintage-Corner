@@ -1,75 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vintage Corner</title>
     <style>
-      /* Resetting default margin and padding */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body,
-      html {
-        height: 100%;
-        background-color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: Arial, sans-serif;
-        color: white;
-        text-align: center;
-        overflow: hidden;
-        flex-direction: column;
-      }
-
-      .container {
-        max-width: 90vw;
-        max-height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      }
-
-      .container img {
-        width: 100%;
-        height: auto;
-        max-width: 800px;
-        border-radius: 10px;
-      }
-
-      /* Text styling */
-      .text {
-        margin-top: 20px;
-        font-size: 1.5rem;
-        line-height: 1.5;
-        max-width: 90%;
-        background: rgba(0, 0, 0, 0.7);
-        padding: 10px;
-        border-radius: 5px;
-      }
-
-      /* Responsive text adjustments */
-      @media (max-width: 600px) {
-        .text {
-          font-size: 1.2rem;
-          padding: 8px;
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      }
+
+        /* Full-screen background setup */
+        body, html {
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('2560x1440Bang.png') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        /* Overlay text styling */
+        .overlay-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* Responsive text adjustments */
+        @media (max-width: 600px) {
+            .overlay-text {
+                font-size: 1.2rem;
+                padding: 10px;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <img src="2560x1440Bang.png" alt="Vintage Corner Logo" />
-      <!-- Image path: /mnt/data/2560x1440Bang.png -->
-      <div class="text">
-        All eyes (and ideas) are on you. The genesis of fresh ideas is underway,
-        shaping the future—coming soon!
-      </div>
+</head>
+<body>
+    <!-- Background Image -->
+    <div class="background-image"></div>
+
+    <!-- Overlay text centered at the bottom -->
+    <div class="overlay-text">
+        All eyes (and ideas) are on you. The genesis of fresh ideas is underway, shaping the future—coming soon!
     </div>
-  </body>
+</body>
 </html>
