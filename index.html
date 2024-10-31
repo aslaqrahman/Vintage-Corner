@@ -15,27 +15,25 @@
         body, html {
             height: 100%;
             background-color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             overflow: hidden;
             font-family: Arial, sans-serif;
             color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .container {
             position: relative;
-            max-width: 90vw;
-            max-height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
         }
 
         .container img {
             width: 100%;
-            height: auto;
-            border-radius: 10px;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* Overlay text styling */
